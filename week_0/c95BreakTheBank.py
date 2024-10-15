@@ -26,7 +26,7 @@ for i in range(20):
             print(f"total: ${sum(total_lis)}")
 
         if choice == "buzzer":
-            print("buzzer! You got nothing!")
+            print("buzzer! You got nothing!!")
             print(f"You could have got:${sum(total_lis)}")
             break
     else:
