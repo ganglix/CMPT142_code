@@ -15,6 +15,6 @@ ptype = "electric"
 color = "yellow"
 if "electric" == "electric":
 print("might be pikachu")
-if not "yellow" == "yellow": 
-print("yes it ’s pikachu!")
+if not "yellow" == "yellow":
+print("yes it ’s pikachu!")    
 """

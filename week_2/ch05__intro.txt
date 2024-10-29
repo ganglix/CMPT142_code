@@ -1,0 +1,10 @@
+math f(x) = x/2
+f: function name
+x: parameter
+purpose: return half of a number passed to this function
+
+use this function
+f(2)
+2: argument
+return 2/2
+return 1

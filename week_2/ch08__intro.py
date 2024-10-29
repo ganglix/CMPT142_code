@@ -15,9 +15,14 @@
 # ==
 # !=
 
-
-
+ans = 1 < 2
+# print(ans)
 # some methods can produce a boolean value
-
+'canada !!'.isalnum()
 
 # Boolean operator
+# not
+print(True and False)
+print(True or False)
+
+# precedence: not, and, or  # NAO
