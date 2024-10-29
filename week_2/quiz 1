@@ -1,3 +1,22 @@
-define a function called half_word. It take a word string as an argument and print the first half of the word.
+INITIALIZE one variable to the integer 7 and a second variable to the integer 6.
+Then PRINT the PRODUCT of those variables.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Define a FUNCTION called first_letter. It take a word string as an argument and return the first letter of the word.
 for example
-half_word('mario') will print 'ma'
+first_letter('mario') will return 'm'
