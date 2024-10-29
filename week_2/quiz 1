@@ -1,22 +1,11 @@
-INITIALIZE one variable to the integer 7 and a second variable to the integer 6.
+Q1:
+INITIALIZE one variable to the integer 7 and
+a second variable to the integer 6.
 Then PRINT the PRODUCT of those variables.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Define a FUNCTION called first_letter. It take a word string as an argument and return the first letter of the word.
+Q2(optional):
+Define a FUNCTION called first_letter.
+It takes a word string as an argument and
+returns the first letter of the word.
 for example
 first_letter('mario') will return 'm'
