@@ -1,0 +1,2 @@
+Define a FUNCTION that accepts two strings. The function should RETURN True if both
+strings are shorter than 10 characters, and False otherwise.
