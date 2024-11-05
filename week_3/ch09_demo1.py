@@ -11,3 +11,24 @@ a2 b2 c2 d2 e2 f2 g2 h2
 a1 b1 c1 d1 e1 f1 g1 h1
 """
 
+# just do the first row
+row = 8
+for col in 'abcdefgh':
+    print(f"{col}{row}", end=' ')  # by default print() will print a new line, end = '\n'
+
+# do the second row
+print()  # print a newline
+row = 7
+for col in 'abcdefgh':
+    print(f"{col}{row}", end=' ')  # by default print() will print a new line, end = '\n'
+
+# do all the rows
+print()
+print('-'*40)
+
+for row in range(8,0,-1):  # 8 7...1
+    for col in 'abcdefgh':
+        print(f"{col}{row}", end=' ')  # by default print() will print a new line, end = '\n'
+    # after printing cols in each row
+    # move to the next row
+    print()  # print a newline
