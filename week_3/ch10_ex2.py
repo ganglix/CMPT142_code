@@ -17,5 +17,29 @@ flu_case = [13, 14, 9, 16, 10, 18, 22, 19, 16, 22,
 index   0   1   2   3   4   5   6   7   ... len(flu_case)-1
 day     1   2   3   4   5   6   7   8   ... len(flu_case)
 """
+days = range(1, len(flu_case) + 1)
+window = 7 # days
 
+# for day 7, get the average of day 1~7
+averaged_day7 = sum(flu_case[0:7])/window
 
+# for day 8, get the average of day 2~8
+averaged_day8 = sum(flu_case[1:8])/window
+
+# for day 9, get the average of day 3~9
+averaged_day9 = sum(flu_case[2:9])/window
+
+# generally, for day day, get the average of day day-7+1~day
+averaged_day_list = []
+for day in days[6:]:
+    averaged_day = sum(flu_case[day-window:day])/window
+    averaged_day_list.append(averaged_day)
+
+import matplotlib.pyplot as plt
+plt.plot(days[6:], averaged_day_list, label = '7 day average')
+plt.plot(days, flu_case, label = 'daily')
+plt.xlabel('Days')
+plt.ylabel('Flu cases')
+plt.legend()
+plt.title('Flu case - day')
+plt.show()

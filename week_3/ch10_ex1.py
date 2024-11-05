@@ -10,62 +10,47 @@
 
 pkg_weights = [2, 6, 8, 34, 56, 67, 4, 2, 33]
 
-# (a) Creates list light_pkgs of parcels that weigh less than 5 lbs
+# (a) Creates list light_pkgs of parcels that weigh less than 5
 light_pkgs = []
-for p in pkg_weights:
-    if p < 5:
-        light_pkgs.append(p)
+for w in pkg_weights:
+    if w <= 5:
+        light_pkgs.append(w)
 print(light_pkgs)
 
 # (b) Removes parcels from pkg_weights that exceed 15 lbs
-# for p in pkg_weights:  # Big mistake: iterating over a size-changing list # DONT do it
-#     if p > 15:
-#         pkg_weights.remove(p)
-# print("after removing pkg > 15lb: ", pkg_weights)
-
-
-# # use index:
-# for i in range(len(pkg_weights)):  # Big mistake: iterating over a size-changing list # DONT do it
-#     if pkg_weights[i] > 15:  # not work
-#         pkg_weights.remove(pkg_weights[i])
-# print("after removing pkg > 15lb: ", pkg_weights)
-
-# # marking strategy [worked!]
-# # step 1
-# # mark the heavy ones
-# heavy_pkgs = []  # to be removed later
-# for p in pkg_weights:
-#     if p > 15:
-#         heavy_pkgs.append(p)
-#
-# # step 2, remove the heavy ones
-# for p in heavy_pkgs:
-#     pkg_weights.remove(p)
+# for w in pkg_weights:  # DO NOT iterate over a size-changing list
+#     if w > 15:
+#         pkg_weights.remove(w)
 # print(pkg_weights)
 
-pkg_weights_clone = pkg_weights.copy()
-for p in pkg_weights_clone:  # use a copy (clone) for iteration, which is not changed in the block
-    if p > 15:
-        pkg_weights.remove(p)
-print("after removing pkg > 15lb: ", pkg_weights)
+# for w in pkg_weights.copy():
+#     if w > 15:
+#         pkg_weights.remove(w)
+# print(pkg_weights)
+
+heavy_weight = []    # a list of item to be removed
+for w in pkg_weights:
+    if w > 15:
+        heavy_weight.append(w)
+
+for w in heavy_weight:  # this list is not changing during the for loop
+    pkg_weights.remove(w)
+print(pkg_weights)
 
 
 # (c) Print the:
 # • contents of light_pkgs in ascending order
-# light_pkgs.sort()
+# light_pkgs.sort()  # this will change the light_pkgs list
 # print(light_pkgs)
-print(sorted(light_pkgs)) # does not change the light_pkgs
+
+print(sorted(light_pkgs))   # sorted function creates a sorted copy; original list is not changed
+print(light_pkgs)
 
 # • number of parcels in light_pkgs
 print(len(light_pkgs))
 
 # • number of parcels removed from pkg_weights
-# print(len(heavy_pkgs))  # with two- step method
-
-# another way  # with copy method
-print(len(pkg_weights_clone) - len(pkg_weights))
-
-
+print(len(heavy_weight))
 
 
 

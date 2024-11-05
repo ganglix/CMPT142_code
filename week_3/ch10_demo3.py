@@ -4,20 +4,31 @@
 # Let us observe the effect on an input variable before,
 # during, and after a function call that changes the value.
 
-def appendage(minilist, x):
-    minilist.append(42)
-    x = x + 5
+# def appendage(minilist, x):
+#     minilist.append(42)
+#     x = x + 5
+#
+#
+# L = [10, 20, 30]
+# x = 50
+# appendage(L, x)
+# print(L)
+# print(x)
 
+
+
+def appendage(minilist, x):
+    new_list = minilist.copy()
+    new_list.append(42)
+    return new_list
 
 L = [10, 20, 30]
 x = 50
-appendage(L, x)
+print(appendage(L, x))
 print(L)
-print(x)
-
-
-
 
 # -----------------------------------------
 # # does this operation create a new list?
+# .copy()
+# [i for i in oldlist]
 

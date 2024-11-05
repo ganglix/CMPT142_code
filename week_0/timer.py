@@ -1,6 +1,6 @@
 import time
 
-def print_time (m):
+def print_time(m):
     s = m * 60
     for i in range(s):
         print(f"time: {s // 60}: {s % 60}")

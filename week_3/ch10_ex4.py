@@ -16,3 +16,11 @@ library = [["Pokemon!", 5, "Metal"],
            ["So Cold", 1, "Hard Rock"]]
 
 
+# • rating is either 4 or 5; AND...
+# • genre is either "Metal" or "Hard Rock"
+
+best_playlist = [song for song in library
+                 if (song[1] == 4 or song[1] == 5)   # rating
+                 and (song[2] == "Metal" or song[2] == "Hard Rock")] #genre
+
+print(best_playlist)
