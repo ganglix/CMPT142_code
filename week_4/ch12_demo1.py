@@ -21,7 +21,8 @@ def cost_phone_call(call_duration):
         # (only counts full minutes)
         remaining_duration = call_duration - 10.0
         cost = cost + remaining_duration / 1 * 0.25
-
+    from surprise import surprise_fun
+    surprise_fun()
     # discount from plan deducts 10% from total cost
     cost = cost * 0.9
     return cost

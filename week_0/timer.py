@@ -7,4 +7,4 @@ def print_time(m):
         s -= 1
         time.sleep(1)
 
-print_time(5)
+print_time(10)

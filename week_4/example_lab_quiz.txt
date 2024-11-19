@@ -1,0 +1,5 @@
+example quiz for next lab:
+
+Create a FUNCTION that accept a list of int numbers, return a new list containing all odd numbers from that input list.
+
+For example: input: [1,2,3,4], expected return: [1, 3]

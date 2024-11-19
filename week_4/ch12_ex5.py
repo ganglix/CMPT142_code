@@ -11,16 +11,18 @@ def cost_phone_call(call_duration):
     # compute cost of call in first ten minutes
     cost = cost + min(call_duration, 10.0) * 0.50
     remaining_duration = max(call_duration - 10.0, 0.0)
+    print("remaining_duration", remaining_duration)
 
     # compute cost of call after first ten minutes
     # (only counts full minutes)
-    cost = cost + remaining_duration / 1 * 0.25
+    cost = cost + remaining_duration // 1 * 0.25
 
+    print("cost before discount", cost)
     # discount from plan deducts 10% from total cost
     cost = cost * 0.9
 
     return cost
 
 
-# should be 5.04
+# should be 5.04 (expected) got this value from billing policy on paper
 print(cost_phone_call(11.15))
