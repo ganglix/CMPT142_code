@@ -6,7 +6,6 @@
 # • rating is either 4 or 5; AND...
 # • genre is either "Metal" or "Hard Rock"
 
-
 # Topic : List Comprehensions ( Selection )
 # list of sublists of a user ’s songs containing [title , rating , genre ]
 library = [["Pokemon!", 5, "Metal"],
