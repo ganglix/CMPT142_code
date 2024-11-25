@@ -1,0 +1,87 @@
+There are 10 types of people in this world, those who
+understand binary and those who don't.
+
+
+
+number:
+numeral:
+
+
+
+quantity   numeral(decimal, arabic number)    numeral(binary, arabic number)
+
+
+
+
+
+Decimal
+base:
+place:
+
+
+
+Binary
+base:
+place:
+
+
+
+Ex 1
+Binary to Decimal
+0b1001
+
+
+
+
+
+Ex 2
+Decimal to Binary
+19
+
+
+
+
+
+Ex 3
+Binary addition
+
+            1   0   1   1   0
+        +           1   0   1
+        ------------------------
+
+
+
+
+Ex 4
+Binary multiplication
+
+                                    1    0    1    1    0
+                                x   1    0    1    1    1
+                                -------------------------
+
+
+
+
+Bonus ex
+Binary division
+
+
+            -------------------
+    1   0   ) 1   1   0   0   1
+
+
+
+
+
+Ex 5 signed magnitude
+
+
+0b00001010
+0b10010010
+
+
+
+What about these two "signed" binary numbers:
+0b10000000
+0b00000000
+
