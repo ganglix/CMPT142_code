@@ -20,3 +20,17 @@ books = [
      "year_published": 1813}
 ]
 
+# create a file
+f = open('my_books.txt', 'w')  # create the file, write mode
+# f = open('my_books.txt', 'a')  # create the file, write-appending mode
+
+# get the book info from a list of dictionary
+for book in books:   # book is dict
+    #book_info = book['title'] + "," + book['author'] + "," + str(book['year_published'])
+    book_info = ','.join([book['title'], book['author'], str(book['year_published'])])
+    # write the book info into a line of text in the file
+    f.write(book_info)
+    f.write("\n")  # go to next line
+
+# save the file and close it at the same time
+f.close()

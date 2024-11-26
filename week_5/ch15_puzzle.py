@@ -10,3 +10,6 @@ x = np.array([10]).astype('int8')
 while x[0] > 0:
     x[0] = x[0] + 1
     print(x[0])
+
+    print(
+   sum([2**p for p in range(64)]))

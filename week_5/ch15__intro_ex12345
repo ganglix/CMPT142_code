@@ -1,45 +1,77 @@
 There are 10 types of people in this world, those who
 understand binary and those who don't.
 
-
-
-number:
-numeral:
-
-
-
-quantity   numeral(decimal, arabic number)    numeral(binary, arabic number)
-
-
+number: pure, abstract, quantity
+numeral: man-made symbols, that has rules to express number(quantity)
+                                                                                use decimal rule of expression
+quantity   numeral(decimal, arabic number)    numeral(binary, arabic number)    to describe the quantity(number)
+.          1                                  1                                 one
+..         2                                  10                                two
+...        3                                  11                                three
 
 
 
 Decimal
-base:
-place:
-
+base: 10  (0~9)
+place: 3        2       1       0
+       1000s    100s    10s     1s
+       10^3     10^2    10^1    10^0
 
 
 Binary
-base:
-place:
-
+base: 2   (0, 1)
+place: 3        2       1       0
+       8s       4s      2s      1s
+       2^3      2^2     2^1     2^0
 
 
 Ex 1
 Binary to Decimal
 0b1001
 
-
+place       3       2       1       0
+0b          1       0       0       1        (binary)
+            2^3     2^2     2^1     2^0
+-----------------------------------------------
+quantity    8   +   0    +  0   +   1   = 9  (decimal)
 
 
 
 Ex 2
 Decimal to Binary
-19
+_______________________________________________________________
+Algorithm DecimalToBinary (x)
+x: a decimal number to be converted to binary
+Returns : binary representation of x
 
+Let b be an empty string
+while x > 0:
+    r = x % 2       # r is a remainder , either 0 or 1
+    add r to the left side of the string b
+    x = x // 2      # integer division !
 
+if b is still an empty string : # (i .e., x was 0 to begin with )
+    return "0"
+else :
+    return b
+-----------------------------------------------------------------
 
+convert 19 to binary
+        x       r       b
+                ''
+        19  %2  1       '1'
+19//2 =  9  %2  1       '11'
+9//2 =   4  %2  0       '011'
+4//2 =   2  %2  0       '0011'
+2//2 =   1  %2  1       '10011'
+1//2 =   0   (while loop is done)
+
+19 in binary is 10011 or 0b10011
+
+2^4   2^3   2^2   2^1  2^0
+1       0      0    1    1
+------------------------------
+16 +   0    + 0   + 2 + 1  = 19
 
 
 Ex 3
@@ -47,8 +79,9 @@ Binary addition
 
             1   0   1   1   0
         +           1   0   1
+        carry   1
         ------------------------
-
+            1   1   0   1   1
 
 
 
@@ -58,18 +91,37 @@ Binary multiplication
                                     1    0    1    1    0
                                 x   1    0    1    1    1
                                 -------------------------
-
-
+                                    1    0    1    1    0
+                               1    0    1    1    0
+                          1    0    1    1    0
+                      0   0    0    0    0
+                1     0   1    1    0
+           carry      1   1    1    1    1
+            ----------------------------------------------------
+                1     1   1    1    1    1    0    1    0
 
 
 Bonus ex
 Binary division
 
-
+                  1   1   0   0 . 1
             -------------------
-    1   0   ) 1   1   0   0   1
-
-
+    1   0   ) 1   1   0   0   1 . 0
+              1   0
+            -----------
+                  1   0
+                  1   0
+                  ---------
+                      0   0
+                      0   0
+                      ---------
+                          0   1
+                          0   0
+                          -----
+                              1 . 0
+                              1   0
+                              -----
+                                  0
 
 
 
@@ -82,6 +134,6 @@ Ex 5 signed magnitude
 
 
 What about these two "signed" binary numbers:
-0b10000000
-0b00000000
+0b10000000    (decimal: -0)
+0b00000000    (decimal: +0)
 
