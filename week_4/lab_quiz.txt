@@ -1,0 +1,6 @@
+
+Create a FUNCTION that accept a list of  numbers, print out all numbers that are greater than the average. No returned value.
+
+For example:
+input: [1,2,3,4],
+expected printout: 3, 4
