@@ -44,7 +44,7 @@ def binary_membership_search(C, target_key, start, end):
 
 # search parameters
 n_data = int(1e8)  # number of data items in array (default 100 Million)
-targetKey = 0  # target key to search for
+targetKey = 1e8//2 -5  # target key to search for
 
 # construct list of ints 0 to n_data-1 to search
 t_start = time.time()
