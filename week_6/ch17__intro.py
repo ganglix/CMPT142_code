@@ -12,10 +12,25 @@ def linear_membership_search(c, target_key):
     target_key: the target key for the search
     return: True if target key is in the collection
     """
+    # base case
+    if len(c) == 0:
+        return False
+    # elif len(c) == 1:      This base case is included in the recursive cas3
+    #     if c[0] == target_key:
+    #         return True
+    #     else:
+    #         return False
+    else:
+        # recursive case, reduce the length to reduce the problem
+        # remove the first number and shorten the list
+        if c[0] == target_key:
+            return True
+        else:
+            # search the rest shortened list
+            return linear_membership_search(c[1:], target_key)
 
 
-
-
+# print(linear_membership_search([1,2,3], 0))
 
 
 
@@ -29,15 +44,25 @@ def binary_membership_search(c, target_key):
     :param target_key: target key to search for
     :return: True if target key is in the collection
     """
+    if len(c) == 0:
+        return False
+    else:
+        mid_index = len(c) // 2
+        # check the middle number
+        if c[mid_index] == target_key:
+            return True
+        else:
+            if c[mid_index] > target_key:
+                # check the left side
+                left = c[:mid_index]
+                return binary_membership_search(left, target_key)
+            else:
+                right = c[mid_index:]
+                return binary_membership_search(right, target_key)
 
 
-
-
-
-
-
-
-
-# # generate an array to work with
-# import numpy as np
-# c = np.random.uniform(0,9, size=5).astype(int)
+# generate an array to work with
+import numpy as np
+c = np.random.uniform(0,9, size=5).astype(int)
+c.sort()
+print(f"is 1 in {c}? {binary_membership_search(c, 1)}")
