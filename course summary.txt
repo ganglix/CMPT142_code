@@ -1,0 +1,95 @@
+                                    Knowledge                           Skill
+Week 1
+------
+Computing                           Algorithm, pseudocode               recognize algorithms, read pseudocode
+
+Hardware and software               von Neumann Architecture
+                                    software/program as data (in binary)
+
+Data,Variables, I/O                 data types, literal, variable,      simple flowtrace
+                                    operators
+
+Sequences
+Indexing and Slicing                rules                               indexing (+/-)
+                                    string                              slicing
+                                    list                                start: stop(exclusive): step
+                                    tuple                               +/- step  [: : -1]
+
+Week 2
+------
+Calling Functions                   built-in, arguments, return         use function, flowtrace function
+                                    object, method                      use a method (string, list)
+
+Creating Functions                  def, parameter, docstring           define a function
+                                    scope (local vs global)             read and write docstring
+                                    return                              generalize
+                                                                        flowtrace
+
+Modules                             def                                 import a module,
+                                    Useful modules                      alias
+                                                                        import a function from a module
+                                                                        from ... import ... as ...
+
+Branching                          relational operator                  flowtrace branching
+                                   boolean operator                     write logic-sound branches
+                                   order of precedence [N A O]
+                                   if - else
+                                   if - elif - else
+                                   if - if - if
+
+Week 3
+------
+Repetition(loops)                  while, for                           flowtrace
+                                   common application                   write loops
+
+list                               common functions and methods         modify a list (pitfall never iterate over a size-changing list)
+                                   mutable datatype                     flowtrace
+                                   list of lists                        indexing and slicing
+                                   list comprehension                   write list comprehension
+
+Week4
+-----
+Software design                    docstring                            write docstring
+
+Testing and Debugging              purpose, blackbox, whitebox          blackbox whitebox reasoning
+                                   test driver                          write test driver
+
+dictionary                         key, value, mutable                  flowtrace
+                                   store information                    modify a dictionary ( never iterate over a size-changing dict)
+                                   map data                             create a dictionary to store data
+                                   database
+
+Week 5
+------
+Files                              format, txt, csv                     write code to read from a file and store data in a dict
+                                   open write, code template            write code to write strings to file
+                                   '\n'                                 dont forget to close
+                                   file directory, absolute/relative
+
+Binary Numbers                     0bxxxxxx                             conversion decimal <-> binary
+                                   signed magnitude representation      calculation + - * / practice
+                                   bit                                  int8(signed) _ _______ 127
+
+
+Week 6
+------
+recursion                          base case                           write recursive function
+                                   recursive case                      recognize base, recursive case
+                                   delegation                          base, recursive case, relationship between
+                                                                       problem and reduced problem
+                                                                       f(base) f(base + a bit more) f( base + even a bit more)
+                                                                       find how are they related to each other
+
+
+Searching                          membership, retrieval (look-up)      apply the algorithm with pencil and paper
+                                   linear, binary(must be sorted)                           with code
+
+Week 7
+------
+Sorting                            insertion sort,
+                                   merge sort                           draw recursion tree (diagram) divide and conquer
+                                   quick sort                           code up in recursive functions
+                                   sort algorithm efficiency
+
+
+Module test                                                             Codelabs + Assignment
