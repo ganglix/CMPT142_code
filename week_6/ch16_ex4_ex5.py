@@ -18,3 +18,5 @@ def print_ascending(N):
     else:
         print_ascending(N-1)
         print(N)
+
+print_ascending(5)
