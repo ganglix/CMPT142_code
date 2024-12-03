@@ -1,0 +1,2 @@
+Define a FUNCTION that accepts a list of strings. The function should RETURN a
+count indicating HOW MANY of those strings START with the letter "j".
