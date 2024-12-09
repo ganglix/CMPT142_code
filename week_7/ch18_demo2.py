@@ -5,7 +5,6 @@ import random as random
 import matplotlib.pyplot as plt
 import time as time
 
-import cmpt142_sorting_algorithms as cmpt142
 
 def time_sorts( seq ):
     """
@@ -23,13 +22,13 @@ def time_sorts( seq ):
         # merge sort
         S = seq.copy()
         time_start = time.time()
-        cmpt142.merge_sort(S)
+        merge_sort(S)
         sort_times['mergesort'] += time.time() - time_start
 
         # quick sort
         S = seq.copy()
         time_start = time.time()
-        cmpt142.quick_sort(S)
+        quick_sort(S)
         sort_times['quicksort'] += time.time() - time_start
 
     for k in sort_times:
