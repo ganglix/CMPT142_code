@@ -5,6 +5,9 @@ import random as random
 import matplotlib.pyplot as plt
 import time as time
 
+# import our sorting functions
+from ch18_ex2_mergeSort import merge_sort
+from ch18_ex4_quickSort import quick_sort
 
 def time_sorts( seq ):
     """

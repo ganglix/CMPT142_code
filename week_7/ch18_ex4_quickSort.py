@@ -19,8 +19,33 @@ def quick_sort(S):
     :param S: a list to be sorted
     :return: sorted list
     """
+    if len(S) <= 1:
+        return S
+    else:
+        # sorts sequence S using quick sort
+        pivot = S[-1]
+        # L = [item for item in S if item < pivot]
+        # G = [item for item in S if item > pivot]
+        # E = [item for item in S if item == pivot]
+        L = []
+        G = []
+        E = []
+        for item in S:
+            if item < pivot:
+                L.append(item)
+            elif item > pivot:
+                G.append(item)
+            else:
+                E.append(item)
+
+        # recursively solve the sub -problems of sorting L and G
+        L_sorted = quick_sort(L)
+        G_sorted = quick_sort(G)
+
+        S = L_sorted + E + G_sorted # (where + represents concatenation)
+        return S
 
 
-
+# print(quick_sort([5, 4, 3, 2, 1]))
 
 
